@@ -1,1 +1,592 @@
+/* =========================
+   CHHAVI MEHNDI ART
+   NAVRATRI '26
+========================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #210d0b;
+    color: #f8ead2;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+section {
+    position: relative;
+    padding: 80px 22px;
+    overflow: hidden;
+}
+
+.eyebrow {
+    color: #e8a84b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 800;
+    line-height: 0.95;
+}
+
+h2 {
+    font-size: clamp(42px, 13vw, 70px);
+}
+
+h2 span {
+    color: #e8a84b;
+}
+
+p {
+    color: #d9c4a5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(232,168,75,0.13), transparent 25%),
+        radial-gradient(circle at 80% 75%, rgba(144,48,30,0.25), transparent 30%),
+        #210d0b;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(39px, 11vw, 65px);
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: #e8a84b;
+}
+
+.mehndi-word {
+    margin: 28px 0 10px;
+    color: #f2c978;
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 13vw, 75px);
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   SPARKLES
+========================= */
+
+.sparkle {
+    position: absolute;
+    color: #e8a84b;
+    opacity: 0.7;
+    font-size: 25px;
+}
+
+.sparkle-1 {
+    top: 18%;
+    left: 12%;
+}
+
+.sparkle-2 {
+    top: 30%;
+    right: 10%;
+    font-size: 18px;
+}
+
+.sparkle-3 {
+    bottom: 18%;
+    left: 20%;
+    font-size: 16px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.main-button,
+.book-button,
+.instagram-button {
+    display: inline-block;
+    padding: 15px 21px;
+    border: 1px solid #e8a84b;
+    border-radius: 50px;
+    background: #e8a84b;
+    color: #210d0b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.25s ease;
+}
+
+.main-button:hover,
+.book-button:hover,
+.instagram-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(232,168,75,0.2);
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    background: #2b110e;
+    text-align: left;
+}
+
+.intro h2 {
+    margin-bottom: 25px;
+}
+
+.intro-text {
+    max-width: 390px;
+    font-size: 16px;
+}
+
+
+/* =========================
+   OFFERS
+========================= */
+
+.offers {
+    background:
+        radial-gradient(circle at 100% 0%, rgba(232,168,75,0.12), transparent 30%),
+        #210d0b;
+}
+
+.section-subtitle {
+    margin: 18px 0 35px;
+    max-width: 390px;
+}
+
+.offer-card {
+    border: 1px solid rgba(232,168,75,0.35);
+    border-radius: 25px;
+    padding: 24px;
+    margin-bottom: 18px;
+    background: rgba(255,255,255,0.035);
+}
+
+.minimal-card {
+    background:
+        linear-gradient(145deg, rgba(232,168,75,0.13), rgba(255,255,255,0.025));
+}
+
+.bharwa-card {
+    background:
+        linear-gradient(145deg, rgba(105,39,25,0.6), rgba(255,255,255,0.025));
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    color: #e8a84b;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.offer-card h3 {
+    font-size: 31px;
+    margin-top: 30px;
+}
+
+.vibe {
+    margin: 10px 0 25px;
+    font-size: 13px;
+}
+
+.price-row {
+    display: flex;
+    gap: 12px;
+}
+
+.price-box {
+    flex: 1;
+    padding: 15px;
+    border-radius: 16px;
+    background: rgba(0,0,0,0.18);
+}
+
+.price-box small {
+    display: block;
+    color: #bda98d;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.price-box strong {
+    display: block;
+    margin-top: 5px;
+    color: #f2c978;
+    font-size: 26px;
+}
+
+.quick-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 11px;
+    color: #cbb79a;
+}
+
+
+/* =========================
+   GROUP OFFER
+========================= */
+
+.group-offer {
+    position: relative;
+    margin-top: 30px;
+    padding: 30px 23px;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid #e8a84b;
+    background: #3b1712;
+}
+
+.group-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.group-offer h3 {
+    font-size: 35px;
+    margin: 12px 0 18px;
+}
+
+.group-offer p {
+    font-size: 14px;
+}
+
+.group-offer strong {
+    color: #f2c978;
+}
+
+.limited {
+    display: inline-block;
+    margin-top: 22px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #e8a84b;
+}
+
+
+/* =========================
+   VIBES
+========================= */
+
+.vibes {
+    background: #2b110e;
+}
+
+.vibe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.vibe-box {
+    min-height: 190px;
+    padding: 22px 16px;
+    border-radius: 22px;
+    border: 1px solid rgba(232,168,75,0.3);
+    background: rgba(255,255,255,0.035);
+}
+
+.vibe-box > span {
+    font-size: 25px;
+}
+
+.vibe-box h3 {
+    margin: 20px 0 12px;
+    font-size: 21px;
+    color: #e8a84b;
+}
+
+.vibe-box p {
+    font-size: 12px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    background: #210d0b;
+}
+
+.gallery-text {
+    margin: 20px 0 30px;
+    max-width: 380px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.gallery-item {
+    aspect-ratio: 1 / 1.15;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    background:
+        radial-gradient(circle at 50% 35%, rgba(232,168,75,0.16), transparent 35%),
+        #32130f;
+    color: #e8a84b;
+    font-size: 30px;
+}
+
+.placeholder span {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.gallery-note {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking {
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(232,168,75,0.14), transparent 35%),
+        #2b110e;
+}
+
+.booking-text {
+    margin: 20px auto 30px;
+}
+
+.location-box {
+    max-width: 380px;
+    margin: 0 auto 25px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: left;
+    border: 1px solid rgba(232,168,75,0.3);
+    border-radius: 20px;
+    background: rgba(0,0,0,0.15);
+}
+
+.location-icon {
+    font-size: 25px;
+}
+
+.location-box strong {
+    color: #e8a84b;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.location-box p {
+    margin-top: 7px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   INSTAGRAM
+========================= */
+
+.instagram {
+    text-align: center;
+    background: #210d0b;
+}
+
+.instagram h2 {
+    margin-bottom: 20px;
+}
+
+.insta-handle {
+    margin: 25px 0;
+    color: #f2c978;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-style: italic;
+}
+
+.instagram-button {
+    background: transparent;
+    color: #e8a84b;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 20px;
+    text-align: center;
+    background: #170806;
+    border-top: 1px solid rgba(232,168,75,0.2);
+}
+
+footer h3 {
+    color: #e8a84b;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+footer p {
+    margin: 10px 0 18px;
+    font-size: 11px;
+}
+
+footer small {
+    color: #806b54;
+    font-size: 10px;
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+section {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero {
+    opacity: 1;
+    transform: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+    section {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    .price-box strong {
+        font-size: 22px;
+    }
+
+    .offer-card h3 {
+        font-size: 27px;
+    }
+
+    .group-offer h3 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* =========================
+   TABLET / DESKTOP
+========================= */
+
+@media (min-width: 700px) {
+
+    section {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+
+    .hero-content,
+    .intro-text,
+    .section-subtitle,
+    .offers,
+    .gallery-text {
+        max-width: 700px;
+    }
+
+    .offer-card {
+        max-width: 650px;
+    }
+
+    .group-offer {
+        max-width: 650px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .vibe-grid {
+        max-width: 650px;
+    }
+
+}
