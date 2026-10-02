@@ -1,26 +1,18 @@
-/* =========================
+/* =========================================
    CHHAVI MEHNDI ART
    NAVRATRI '26
-========================= */
+========================================= */
 
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
+// Scroll animation
 const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(
     (entries) => {
-
         entries.forEach((entry) => {
-
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
             }
-
         });
-
     },
     {
         threshold: 0.12
@@ -32,17 +24,14 @@ sections.forEach((section) => {
 });
 
 
-/* =========================
-   BUTTON TAP EFFECT
-========================= */
-
+// Button press animation
 const buttons = document.querySelectorAll("a");
 
 buttons.forEach((button) => {
 
     button.addEventListener("click", () => {
 
-        button.style.transform = "scale(0.96)";
+        button.style.transform = "scale(0.97)";
 
         setTimeout(() => {
             button.style.transform = "";
@@ -53,37 +42,32 @@ buttons.forEach((button) => {
 });
 
 
-/* =========================
-   NAVRATRI SPARKLES
-========================= */
-
+// Festive floating sparkles
 function createSparkle() {
 
     const sparkle = document.createElement("span");
 
-    sparkle.innerHTML = Math.random() > 0.5 ? "✦" : "✧";
+    sparkle.textContent =
+        Math.random() > 0.5 ? "✦" : "✧";
 
     sparkle.style.position = "fixed";
     sparkle.style.left = Math.random() * 100 + "vw";
     sparkle.style.top = "-20px";
 
     sparkle.style.fontSize =
-        Math.random() * 9 + 8 + "px";
+        Math.random() * 8 + 8 + "px";
 
-    sparkle.style.color = "#e8a84b";
-    sparkle.style.opacity = "0.6";
-
+    sparkle.style.color = "#e8b45d";
+    sparkle.style.opacity = "0.55";
     sparkle.style.pointerEvents = "none";
     sparkle.style.zIndex = "9999";
 
     document.body.appendChild(sparkle);
 
-
     const duration =
-        Math.random() * 3000 + 3000;
+        Math.random() * 2500 + 3500;
 
-
-    sparkle.animate(
+    const animation = sparkle.animate(
 
         [
             {
@@ -93,7 +77,7 @@ function createSparkle() {
 
             {
                 transform: "translateY(50vh) rotate(180deg)",
-                opacity: 0.7
+                opacity: 0.55
             },
 
             {
@@ -109,48 +93,29 @@ function createSparkle() {
 
     );
 
-
-    setTimeout(() => {
+    animation.onfinish = () => {
         sparkle.remove();
-    }, duration);
+    };
 
 }
 
 
-/* Create sparkles occasionally */
-
+// New sparkle every few seconds
 setInterval(() => {
 
     if (Math.random() > 0.45) {
         createSparkle();
     }
 
-}, 1400);
+}, 1600);
 
 
-/* =========================
-   CURRENT YEAR
-========================= */
+// Automatically update footer year
+const footerYear = document.querySelector("footer small");
 
-const yearElement =
-    document.querySelector("footer small");
+if (footerYear) {
 
-if (yearElement) {
-
-    yearElement.textContent =
-        "© " +
-        new Date().getFullYear() +
-        " Chhavi Mehndi Art";
+    footerYear.textContent =
+        `© ${new Date().getFullYear()} Chhavi Mehndi Art`;
 
 }
-
-
-/* =========================
-   PAGE LOADED
-========================= */
-
-window.addEventListener("load", () => {
-
-    document.body.classList.add("page-loaded");
-
-});
